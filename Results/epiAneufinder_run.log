@@ -1,0 +1,59 @@
+nohup: ignoring input
+There were 32 warnings (use warnings() to see them)
+trying URL 'https://raw.githubusercontent.com/Boyle-Lab/Blacklist/master/lists/hg38-blacklist.v2.bed.gz'
+Content type 'application/octet-stream' length 5867 bytes
+==================================================
+downloaded 5867 bytes
+
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] "# id=DV90"                              
+[2] "# description=DV90"                     
+[3] "#"                                      
+[4] "# pipeline_name=cellranger-arc"         
+[5] "# pipeline_version=cellranger-arc-2.0.2"
+Removing old file from the output folder
+Subtracting Blacklist...
+Adding Nucleotide Information...
+1 of 22
+2 of 22
+3 of 22
+4 of 22
+5 of 22
+6 of 22
+7 of 22
+8 of 22
+9 of 22
+10 of 22
+11 of 22
+12 of 22
+13 of 22
+14 of 22
+15 of 22
+16 of 22
+17 of 22
+18 of 22
+19 of 22
+20 of 22
+21 of 22
+22 of 22
+[1] "Finished making windows successfully"
+Obtaining the fragments tsv file
+Getting Counts...
+Counting reads from fragments/bed file .. 
+Count matrix with 4007 cells and 2296 windows has been generated and will be saved as count_summary.rds
+Filtering cell without enough covered windows, 4007 cells remain.
+Filtering empty windows, 2296 windows remain.
+Correcting for GC bias using a LOESS fit ...
+Calculating distance AD
+Successfully identified breakpoints
+Successfully discarded irrelevant breakpoints
+Successfully assigned gain-loss
+A .tsv file with the results has been written to disk. 
+          It contains the copy number states for each cell per bin.
+          0 denotes 'Loss', 1 denotes 'Normal', 2 denotes 'Gain'.
+Warning message:
+In fread(input) :
+  Detected 1 column names but the data has 5 columns (i.e. invalid file). Added 4 extra default column names at the end.
+[1] "ciao"
