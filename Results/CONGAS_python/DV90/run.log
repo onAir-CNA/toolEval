@@ -1,0 +1,64 @@
+20:58:38  INFO      =================================================================
+20:58:38  INFO        CONGASp – DV90 scATAC-seq CNV inference (v2, PCR-corrected)
+20:58:38  INFO      =================================================================
+20:58:38  INFO      Input count matrix: /sharedFolder/Results/AtaCNV/DV90/count.rds
+20:58:38  INFO      Output dir: /sharedFolder/Results/CONGAS_python/DV90
+20:58:38  INFO      [1/5] Caricamento count matrix da AtaCNV ...
+20:58:40  INFO            Celle: 3472
+20:58:40  INFO            Bin: 3102
+20:58:41  INFO            Matrice caricata: 3102 bin x 3472 celle
+20:58:41  INFO            Somma totale conteggi: 183,873,488
+20:58:41  INFO      [2/5] Quality filtering celle e bin ...
+20:58:41  INFO            Celle con >= 500 frammenti: 3456 / 3472
+20:58:41  INFO            Bin con >= 5% occupancy: 2922 / 3102
+20:58:41  INFO            Matrice finale: 2922 bin x 3456 celle
+20:58:41  INFO      [3/5] Costruzione dizionario input CONGASp ...
+20:58:41  INFO            data_atac shape : (2922, 3456)
+20:58:41  INFO            norm_factor range: [0.010, 19.376]
+20:58:41  INFO      [4/5] Fit CONGASp (LatentCategorical) per K = [2, 3, 4] ...
+20:58:41  INFO      
+20:58:41  INFO        ── K = 2 ──────────────────────────────────────────
+20:58:41  INFO            Avvio SVI ...
+21:22:21  INFO            BIC = 52941088.0000   ICL = 52941088.0000   NLL = 26315784.0000
+21:22:21  INFO            Salvato -> fit_K2.pkl
+21:22:21  INFO      
+21:22:21  INFO        ── K = 3 ──────────────────────────────────────────
+21:22:21  INFO            Avvio SVI ...
+21:59:56  INFO            BIC = 53055240.0000   ICL = 53055240.0000   NLL = 26301432.0000
+21:59:56  INFO            Salvato -> fit_K3.pkl
+21:59:56  INFO      
+21:59:56  INFO        ── K = 4 ──────────────────────────────────────────
+21:59:56  INFO            Avvio SVI ...
+22:46:40  INFO            BIC = 53226316.0000   ICL = 53226316.0000   NLL = 26315540.0000
+22:46:40  INFO            Salvato -> fit_K4.pkl
+22:46:40  INFO      
+22:46:40  INFO      [5/5] Model selection ...
+22:46:40  INFO      
+ K        BIC        ICL        NLL
+ 2 52941088.0 52941088.0 26315784.0
+ 3 53055240.0 53055240.0 26301432.0
+ 4 53226316.0 53226316.0 26315540.0
+22:46:40  INFO      
+  ★  Miglior K per BIC = 2
+22:46:40  INFO        CNV calls -> cnv_calls_K2.csv
+22:46:40  INFO        Cluster sizes:
+cluster
+1    3456
+22:46:41  INFO      
+22:46:41  INFO      =================================================================
+22:46:41  INFO        RUN COMPLETATO
+22:46:41  INFO        Output: /sharedFolder/Results/CONGAS_python/DV90
+22:46:41  INFO          CNV_heatmap_K2.png
+22:46:41  INFO          ELBO_loss_curves.png
+22:46:41  INFO          barcodes_filtered.csv
+22:46:41  INFO          bins_filtered.csv
+22:46:41  INFO          cell_assignments_K2.csv
+22:46:41  INFO          cnv_calls_K2.csv
+22:46:41  INFO          count_matrix_filtered.npy
+22:46:41  INFO          fit_K2.pkl
+22:46:41  INFO          fit_K3.pkl
+22:46:41  INFO          fit_K4.pkl
+22:46:41  INFO          model_selection_BIC.csv
+22:46:41  INFO          model_selection_BIC.png
+22:46:41  INFO          run.log
+22:46:41  INFO      =================================================================
